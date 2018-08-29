@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mysql:
+    image: honeyshawn/mysql:5.7
+    container_name: mysql
+    volumes:
+      - /opt/data:/var/lib/mysql # 持久化
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=123456
+      - MYSQL_ROOT_PASSWORD=123456
