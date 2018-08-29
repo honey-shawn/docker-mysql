@@ -3,11 +3,12 @@ services:
   mysql:
     image: honeyshawn/mysql:5.7
     container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
     volumes:
-      - /opt/data:/var/lib/mysql # 持久化
+      - /Users/honey-shawn/data/test:/var/lib/mysql # 持久化
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=123456
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=password
       - MYSQL_ROOT_PASSWORD=123456

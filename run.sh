@@ -6,9 +6,9 @@ service mysql start
 echo `service mysql status`
 
 #登录mysql
-MYSQL="mysql -uroot -p$MYSQL_PASSWORD"
+MYSQL="mysql -uroot -p$MYSQL_ROOT_PASSWORD"
 #远程登录
-sql_i="GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '$MYSQL_PASSWORD' WITH GRANT OPTION;"
+sql_i="GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '$MYSQL_ROOT_PASSWORD' WITH GRANT OPTION;"
 sql_j="flush privileges;"
 sql_z="exit"
 
